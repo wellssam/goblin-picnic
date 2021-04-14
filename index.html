@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+    <div class="wrapper startHidden">
+        <h1>GOBLIN PICNIC</h1>
+        <div class="counters">
+            <ul class="counter-list">
+                <li>RIVALRY: <span id="rivalry-counter">0</span></li>
+                <li>ROMANCE: <span id="romance-counter">0</span></li>
+                <li>RAPPORT: <span id="rapport-counter">0</span></li>
+            </ul>
+        </div>
+
+        <img src="./brook.jpg" alt="A photo of a shallow stream running through dense foliage." id="brook-pic">
+
+
+        <button class="continue-button" id="start-button">START</button>
+        <div class="page page-1">
+            <!-- BEGINNING OF INTRO -->
+            <p class="story">You come to the edge of a gurgling brook, a basket of food and other supplies under your arm. You take a seat on the bank and listen to the water, feeling the cool, damp leaves between your fingers. <br> <br>The goblin is nowhere to be found.</p>
+            
+            <!--  button that allows player to progress in the story  -->
+            <button class="continue-button" id="continue-button-intro-1">Wait...</button>
+        </div>
+
+        <!-- intro part 2 -->
+
+        <div class="page page-2">
+
+            <p class="story intro-part-2"> You hear a cracking of branches a ways up the bank. Peering through the leaves, you can make out a small, greenish figure working its way through the foliage. You recognize the uneven, loping gait of <span class="goblin-name"></span>, the goblin you were waiting for.</p>
+            
+            <!--  button that allows player to progress the story  -->
+            <button class="continue-button intro-part-2" id="continue-button-intro-2">Wait for <span class="goblin-name">goblinName</span> to notice you.</button>
+        </div>
+            
+        <!-- END OF INTRO -->
+        <!-- BEGINNING OF SCENE 1 -->
+        
+        <!-- Scene 1 setup -->
+        <div class="page page-3">
+            <p class="story" id="scene-1-setup">As <span class="goblin-name">goblinName</span> works <span class="possessive-pronoun">goblinPronoun</span> way up the bank, <span class="personal-pronoun">goblinPronoun</span> spot<span class="verb-tense">s</span> you! Flashing a mischievous grin, <span class="personal-pronoun">goblinPronoun</span> begin<span class="verb-tense">s</span> scurrying towards you.<br><br> What do you do ..?</p> 
+            
+            
+            <!-- Player reactions for scene 1 -->
+            <ul>
+                <li class="reaction story" id="fight-reaction-1">FIGHT: Grab the nearest branch and assume a fencer's pose. "There you are, you scoundrel! Do you know how long you've kept me waiting? I demand satisfaction!"</li>
+                
+                <li class="reaction story" id="flirt-reaction-1">FLIRT: Reach into your basket and pull out a bouquet of wilted flowers. Pull back your arm and hurl them at full force directly at <span class="goblin-name">goblinName</span>'s face, in the goblin custom of presenting gifts.</li>
+                
+                <li class="reaction story" id="friend-reaction-1">FRIEND: Sprint to <span class="goblin-name">goblinName</span> at full speed and perform your secret handshake.</li>
+            </ul>
+        </div>
+            
+
+
+        <!-- scene 1 resolution - fight -->
+        <div class="page page-4">
+
+            <p class="resolution story" id="fight-resolution-1">"Aye, I'll meet ye, longshanks!" <span class="personal-pronoun">goblinPronoun</span> shout<span class="verb-tense">s</span>, grabbing a stick without breaking stride. Your makeshift weapons crack together, echoing through the wood. You manage to give a solid blow to your opponent's knee, but are quickly repaid in kind with a leaping strike to the shoulder. After a few more exchanges, you fall together on the riverbank, exhausted and equally matched.</p>
+            
+            <!-- scene 1 resolution - flirt -->
+            <p class="resolution story" id="flirt-resolution-1">"Oh my goodness, they're horrible!" <span class="goblin-name">goblinName</span> gasps, catching them deftly. "Grey and brown, how did you know my favourite colours!" 
+            "Lucky guess," you say, thrilled your gift was received so well.
+            "They smell absolutely rotten," <span class="personal-pronoun">goblinPronoun</span> say<span class="verb-tense">s</span>, taking a deep, luxuriant sniff. "Thank you."
+            Happily, the two of you take a seat in the dead leaves along the bank.</p>
+                
+        <!-- scene 1 resolution - friend -->
+
+            <p class="resolution story" id="friend-resolution-1"><span class="goblin-name">goblinName</span> knows what you're doing before you even begin. You seamlessly launch into your extremely elaborate secret "handshake" (really more of an acrobatic routine). After several fist bumps, flips, leapfrogs and thumb wars, you fall laughing onto the bank, tired from your self-inflicted gauntlet.</p>
+            
+            <!--  button that allows player to progress the story-->
+            <button class="continue-button" id="continue-button-scene-1"> Continue</button>
+            
+        </div>
+        <!-- END OF SCENE 1 -->
+        <!-- BEGINNING OF SCENE 2 -->
+        
+        <!-- Scene 2 setup -->
+
+        <div class="page page-5">
+
+            <p class="story" id="scene-2-setup">You lay for a while on the bank, watching the water flow over the rocks in front of you. Eventually, <span class="goblin-name">goblinName</span> asks you a question:
+            "How long has it been since we last met?"<br><br>You say ... </p>
+            
+            
+            <!-- Player reactions for scene 2 -->
+            <ul>
+                <li class="reaction story" id="fight-reaction-2">FIGHT:"Two weeks. We met on the battlefield at the siege of <span class="place">randomPlace</span>, you challenged me to single combat, and though I could not best you then, I will not fail today!" Then attempt to throw <span class="goblin-name">goblinName</span> into the river. </li>
+                
+                <li class="reaction story" id="flirt-reaction-2">FLIRT: "Two weeks. We met in the flower gardens at <span class="place">randomPlace</span>. You had snuck in to try and eat the tulip bulbs while no-one was looking. I had come looking for something truly beautiful. Little did I know just how beautiful it would be..." </li>
+                
+                <li class="reaction story" id="friend-reaction-2">FRIEND: "Like two weeks, remember? I came to stay at your place in <span class="place">randomPlace</span>, we got <span class="takeout">randomFood</span> and watched <span class="movie">randomMovie</span>, it was great. Did you hit your head or something?"</li>
+            </ul>
+                
+        </div>
+
+
+        <!-- scene 2 resolution - fight -->
+        <div class="page page-6">
+
+            <p class="resolution story" id="fight-resolution-2"><span class="goblin-name">goblinName</span> manages to grab onto your ankle as <span class="personal-pronoun">goblinPronoun</span> fall<span class="verb-tense">s</span>, and you both go tumbling into the water. Fortunately, the water is only a foot deep, and though you are now both dripping wet you're not in any serious danger. After tussling for a while in the stream, you drag yourself back onto dry land and reach for your basket. This whole ordeal has made you rather hungry. You look up and see <span class="goblin-name">goblinName</span> seems to feel the same.</p>
+            
+            <!-- scene 2 resolution - flirt -->
+            <p class="resolution story" id="flirt-resolution-2"><span class="goblin-name">goblinName</span> brings a hand up to <span class="possessive-pronoun">goblinPronun</span> face, hiding a blush. You sit happily together for a while, reminiscing about your first meeting, before remembering a picnic usually involves eating food.</p>
+            
+            <!-- scene 2 resolution - friend -->
+            <p class="resolution story" id="friend-resolution-2">"Oh yeah, I definitely have. That was a great hang though." <span class="goblin-name">goblinName</span> says.
+            "Hey, speaking of <span class="takeout">randomFood</span>, are you hungry?"</p>
+                
+            <!--  button that allows player to progress the story  -->
+            <button class="continue-button" id="continue-button-scene-2">Continue</button>
+            
+            
+        </div>
+        <!-- END OF SCENE 2 -->
+        <!-- BEGINNING OF SCENE 3 -->
+
+        <div class="page page-7">
+
+            <!-- Scene 3 setup -->
+            <p class="story" id="scene-3-setup"> <span class="goblin-name">goblinName</span> reaches into a small sackcloth bag slung across <span class="possessive-pronoun">goblinPronun</span> back. Grinning, <span class="personal-pronoun">goblinPronoun</span> pull<span class="verb-tense">s</span> out two pieces of cardboard and some cracked christmas ornaments. <span class="personal-pronoun">goblinPronoun</span> lay<span class="verb-tense">s</span> the cardboard out on the grass and crush<span class="verb-tense">es</span> the ornaments in <span class="possessive-pronoun">goblinPronoun</span> hands. The sandwich complete, <span class="personal-pronoun">goblinPronoun</span> take<span class="verb-tense">s</span> a great big bite and begin<span class="verb-tense">s</span> munching happily, completely unharmed by the unusual meal. <br><br> What do you do...?</p>
+            
+            
+            <!-- Player reactions for scene 3 -->
+            <ul> 
+                <li class="reaction story" id="fight-reaction-3">FIGHT: This is your chance!! Strike now while <span class="goblin-name">goblinName</span> is vulnerable! Sneak through the bushes and try to yell really loud, hoping <span class="personal-pronoun">goblinPronoun</span> choke<span class="verb-tense">s.</span> </li>
+                
+                <li class="reaction story" id="flirt-reaction-3">FLIRT: Reach into your basket and reveal the exquisitely crafted romantic meal you prepared, which combines elements of both human and goblin cuisine into a meal you'll both enjoy.</li>
+                
+                <li class="reaction story" id="friend-reaction-3">FRIEND: Reach into your basket and pull out a sandwich for yourself, as well as some chips and the board game you and <span class="goblin-name">goblinName</span> always play when you hang out.</li>
+            </ul>
+                
+        </div>
+
+            
+        <div class="page page-8">
+
+            <!-- scene 3 resolution - fight -->
+            <p class="resolution story" id="fight-resolution-3">You manage to disappear into the bushes and sneak up behind <span class="goblin-name">goblinName</span>, but just as you're jumping out, <span class="personal-pronoun">goblinPronoun</span> turn<span class="verb-tense">s</span> to face you, and instead of choking <span class="personal-pronoun">goblinPronoun</span> spit<span class="verb-tense">s</span> <span class="possessive-pronoun">goblinPronoun</span> food into your face. It doesn't hurt, but it is gross. Dejected, you return to your spot on the bank,<span class="goblin-name">goblinName</span> laughing all the while.</p>
+            
+            <!-- scene 3 resolution - flirt -->
+            <p class="resolution story" id="flirt-resolution-3"> <span class="goblin-name">goblinName</span> is thoroughly impressed by your meal. The mix of flavours is absolutely exquisite, and you managed to create something both familiar and fresh for both of you. You spend a long time talking, learning about one another. As you talk, inside jokes and idioms naturally develop, and soon you feel like you're talking to an old friend.
+            </p>
+            
+            <!-- scene 3 resolution - friend -->
+            <p class="resolution story" id="friend-resolution-3">You play a rousing game of <span class="board-game">randomGame</span>, and reminisce about the old days when you lived in the same city. <span class="goblin-name">goblinName</span> wins, but you don't mind (you won last time, after all).</p>
+            
+            <!--  button that allows player to progress the story  -->
+            <button class="continue-button" id="continue-button-scene-3">Continue</button>
+            
+        </div>    
+            <!-- END OF SCENE 3 -->
+            <!-- BEGINNING OF SCENE 4 -->
+            
+        <!-- Scene 4 setup -->
+        <div class="page page-9">
+
+            <p class="story" id="scene-4-setup">The sun is beginning to set, and you know the day is coming to an end. What will your parting words to <span class="goblin-name">goblinName</span> be?</p>
+            
+            
+            <!-- Player reactions for scene 4 -->
+            <ul>
+
+                <li class="reaction story" id="fight-reaction-4">FIGHT: Swear eternal vengeance!!</li>
+                
+                <li class="reaction story" id="flirt-reaction-4">FLIRT: Tell <span class="goblin-name">goblinName</span> you had a great time, and you'd love to go out again.</li>
+                
+                <li class="reaction story" id="friend-reaction-4">FRIEND: Return the <span class="item">forgottenItem</span> that <span class="goblin-name">goblinName</span> left at your place the last time <span class="personal-pronoun">goblinPronoun</span> visited you.</li>
+                
+            </ul>
+        </div>
+            
+        <div class="page page-10">
+
+            <!-- scene 4 resolution - fight -->
+            <p class="resolution story" id="fight-resolution-4">"Indeed!" <span class="goblin-name">goblinName</span> cries back at you, "your name will forever be as poison on my lips, and my dagger will seek your heart forevermore!" Then <span class="personal-pronoun">goblinPronoun</span> run<span class="verb-tense">s</span> off into the woods, surely so <span class="personal-pronoun">goblinPronoun</span> can prepare for your next battle.</p>
+            
+            <!-- scene 4 resolution - flirt -->
+            <p class="resolution story" id="flirt-resolution-4"><span class="goblin-name">goblinName</span> beckons for you to lean closer. You stoop down to <span class="possessive-pronoun">goblinPronun</span> level (the height difference really is significant) and just as you do, <span class="personal-pronoun">goblinPronoun</span> give<span class="verb-tense">s</span> you a quick kiss on the cheek. Grinning mischievously once again, <span class="personal-pronoun">goblinPronoun</span> run<span class="verb-tense">s</span> off into the forest. You feel butterflies in your stomach as you return home.</p>
+            
+            <!-- scene 4 resolution - friend -->
+            <p class="resolution story" id="friend-resolution-4">"Oh wow! I totally forgot about that! Thanks so much!" <br><br> You say goodbye to one another, and decide when and where you'll next meet. You mark it on your calendar as soon as you get home, and look forward to the next time you'll see your friend.</p>
+            
+            <!--  button that allows player to progress the story  -->
+            <button class="continue-button" id="continue-button-scene-4">Continue</button>
+            
+        </div>
+        <!-- END OF SCENE 4 -->
+        <!-- in case of tie -->
+        <div class="page page-11">
+            <p class="story choose-ending">Looks like you have mixed feelings! How do you want the story to end?
+
+            <ul>
+                <li class="reaction story choose-ending" id="choose-ending-fight">I'd like to finally defeat <span class="goblin-name">goblinName</span> on the field of battle.</li>
+                <li class="reaction story choose-ending" id="choose-ending-flirt">I'd like to go on a second date.</li>
+                <li class="reaction story choose-ending" id="choose-ending-friend">I'd like to hang out again sometime soon.</li>
+            </ul>
+        <!-- ENDINGS -->
+
+        
+
+            
+            <p class="story ending" id="fight-ending">As time goes one, you and <span class="goblin-name">goblinName</span> clash many more times. Your enmity stretches for decades, long past the point where either of you remember what caused it initially. Eventually, it becomes the only thing fuelling you both, and you dedicate your lives to destroying one another. However, equally matched as you are, you never quite manage to fully defeat <span class="goblin-name">goblinName</span>, nor <span class="personal-pronoun">goblinPronoun</span> you.</p>
+            
+            
+            <p class="story ending" id="flirt-ending">The second date with <span class="goblin-name">goblinName</span> is a great success, as is the third, and the fourth. Over time, you build a happy and healthy relationship together. Some view it as unconventional, but neither of you mind. You bring one another a lot of joy for a long time to come.</p>
+            
+            
+            <p class="story ending" id="friend-ending">You and <span class="goblin-name">goblinName</span> continue to nurture your friendship for many, many years. Whether living in the same place, or over long distance, you always find a way to spend time together. Even though it seems like an unassuming friendship, you realize it's one of the most rewarding relationships in your life.</p>
+            
+            <button class="continue-button" id="continue-button-ending">The End</button>
+            
+        </div>
+
+            <!-- Final splash screen -->
+        <div class="page page-12">
+
+            <h2 class="thank-you">Thank you for playing Goblin Picnic!</h2>
+            <button id="play-again">Play again?</button>
+
+        </div>
+            
+        <footer>
+           <p> Sam Wells 2021. Made at <a href="https://junocollege.com/">Juno College</a> . Photos courtesy of  <a href="https://unsplash.com/">Unsplash</a>.</p>
+        </footer>
+
+
+
+
+    </div>
+    <!-- scripts here -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src='./script.js'></script>
+</body>
+</html>
